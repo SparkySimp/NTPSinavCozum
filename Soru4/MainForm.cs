@@ -19,7 +19,7 @@ namespace Soru4
             InitializeComponent();
         }
 
-        private void SayiButon_Click(object button, EventArgs e)
+        private void SayiButon_Click(object button, EventArgs _)
         {
             ((Control)button).Text = rng.Next(1, 101).ToString();
             if (int.Parse(((Control)button).Text) % 3 == 0)
@@ -34,7 +34,7 @@ namespace Soru4
             lblSayac.Text = $"Tık Sayısı: {tikSayisi}";
         }
 
-        private void MainForm_Load(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs _)
         {
             Button[] buttons = (from Control ctl in this.Controls where ctl is Button _ select (Button)ctl).ToArray();
 
